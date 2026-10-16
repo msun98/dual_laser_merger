@@ -9,7 +9,8 @@ find_package(ament_cmake_auto REQUIRED)
 ament_auto_find_build_dependencies()
 
 ament_auto_add_library(dual_laser_merger SHARED
-  src/dual_laser_merger.cpp)
+  src/dual_laser_merger.cpp
+  src/scan_merger.cpp)
 
 rclcpp_components_register_node(dual_laser_merger
   PLUGIN "merger_node::MergerNode"
